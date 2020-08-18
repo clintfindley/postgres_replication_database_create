@@ -1,17 +1,17 @@
-grant select on table testtable to odctest_read;
+grant select on table testtable to test_read;
 
-grant select, insert, update, delete on table testtable to odctest_user;
+grant select, insert, update, delete on table testtable to test_user;
 
-grant all on table testtable to odctest_admin;
+grant all on table testtable to test_admin;
 
-grant usage, select on testtable_field1_seq to odctest_user;
+grant usage, select on testtable_field1_seq to test_user;
 
-grant all on testtable_field1_seq to odctest_admin;
+grant all on testtable_field1_seq to test_admin;
 
-grant usage, select on incrementing_int to odcuser;
+grant usage, select on incrementing_int to user;
 
-grant odctest_read to odcread;
+grant test_read to read;
 
-grant odctest_admin to odcadmin;
+grant test_admin to admin;
 
-grant odctest_user to odcuser;
+grant test_user to user;
