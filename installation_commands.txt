@@ -19,6 +19,9 @@ vi /etc/profile or ~/.bash_profile
 	export PATH
 
 
+I copied the postgresql.conf file into master and slave versions and made some edits. The resulting files are on the repo.
+
+
 Made a couple of links on the master:
 
 ln -s /etc/postgresql/9.3/main/pg_hba_master.conf /etc/postgresql/9.3/main/pg_hba.conf
@@ -29,4 +32,14 @@ And the slave:
 
 ln -s /etc/postgresql/9.3/main/pg_hba_slave.conf /etc/postgresql/9.3/main/pg_hba.conf
 ln -s /etc/postgresql/9.3/main/postgresql_slave.conf /etc/postgresql/9.3/main/postgresql.conf
+
+
+Run the create scripts in the following order:
+
+1) create_roles.sql
+2) create_users.sql
+3) create_grants.sql
+4) create_sequences.sql
+5) create_functions.sql
+6) create_tables.sql
 
