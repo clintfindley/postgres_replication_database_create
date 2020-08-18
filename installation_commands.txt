@@ -30,3 +30,5 @@ And the slave:
 ln -s /etc/postgresql/9.3/main/pg_hba_slave.conf /etc/postgresql/9.3/main/pg_hba.conf
 ln -s /etc/postgresql/9.3/main/postgresql_slave.conf /etc/postgresql/9.3/main/postgresql.conf
 
+
+Run the create scripts.
