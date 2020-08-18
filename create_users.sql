@@ -1,8 +1,8 @@
-create user odcread with password 'odcread'
-	role odctest_read;
+create user read with password 'read'
+	role test_read;
 
-create user odcuser with password 'odcuser'
-	role odctest_user;
+create user user with password 'user'
+	role test_user;
 
-create user odcadmin with password 'odcadmin'
-	role odctest_admin;
+create user admin with password 'admin'
+	role test_admin;
