@@ -1,0 +1,32 @@
+I installed the binaries:
+
+sudo apt-get install postgresql-9.3 postgresql-contrib-9.3
+
+./configure
+gmake
+gmake install
+
+
+Then added the following lines to the .bash_profile and sourced it:
+
+
+vi /etc/profile or ~/.bash_profile
+	LD_LIBRARY_PATH=/usr/local/pgsql/lib
+	export LD_LIBRARY_PATH
+	MANPATH=/usr/local/pgsql/share/man:$MANPATH
+	export MANPATH
+	PATH=/usr/local/pgsql/bin:$PATH
+	export PATH
+
+
+Made a couple of links on the master:
+
+ln -s /etc/postgresql/9.3/main/pg_hba_master.conf /etc/postgresql/9.3/main/pg_hba.conf
+ln -s /etc/postgresql/9.3/main/postgresql_master.conf /etc/postgresql/9.3/main/postgresql.conf
+
+
+And the slave:
+
+ln -s /etc/postgresql/9.3/main/pg_hba_slave.conf /etc/postgresql/9.3/main/pg_hba.conf
+ln -s /etc/postgresql/9.3/main/postgresql_slave.conf /etc/postgresql/9.3/main/postgresql.conf
+
