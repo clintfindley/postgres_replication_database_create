@@ -18,6 +18,7 @@ vi /etc/profile or ~/.bash_profile
 	PATH=/usr/local/pgsql/bin:$PATH
 	export PATH
 
+I copied the postgresql.conf file into master and slave versions and made some edits. The resulting files are on the repo.
 
 Made a couple of links on the master:
 
