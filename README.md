@@ -3,3 +3,6 @@ scripts and edits used to create a simple replicated postgres database from scra
 The text files have further commands and explanations for some actions.
 
 No warranty implied or suggested.
+
+
+Start in the installation_instructions.txt file.
