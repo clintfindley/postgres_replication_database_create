@@ -31,4 +31,11 @@ ln -s /etc/postgresql/9.3/main/pg_hba_slave.conf /etc/postgresql/9.3/main/pg_hba
 ln -s /etc/postgresql/9.3/main/postgresql_slave.conf /etc/postgresql/9.3/main/postgresql.conf
 
 
-Run the create scripts.
+Run the create scripts in the following order:
+
+1) create_roles.sql
+2) create_users.sql
+3) create_grants.sql
+4) create_sequences.sql
+5) create_functions.sql
+6) create_tables.sql
