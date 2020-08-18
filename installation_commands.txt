@@ -18,7 +18,9 @@ vi /etc/profile or ~/.bash_profile
 	PATH=/usr/local/pgsql/bin:$PATH
 	export PATH
 
+
 I copied the postgresql.conf file into master and slave versions and made some edits. The resulting files are on the repo.
+
 
 Made a couple of links on the master:
 
@@ -40,3 +42,4 @@ Run the create scripts in the following order:
 4) create_sequences.sql
 5) create_functions.sql
 6) create_tables.sql
+
