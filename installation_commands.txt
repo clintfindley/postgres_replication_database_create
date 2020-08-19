@@ -36,6 +36,8 @@ ln -s /etc/postgresql/9.3/main/pg_hba_slave.conf /etc/postgresql/9.3/main/pg_hba
 ln -s /etc/postgresql/9.3/main/postgresql_slave.conf /etc/postgresql/9.3/main/postgresql.conf
 
 
+Start database (commands needed)
+
 Run the create scripts in the following order:
 
 1) create_roles.sql
