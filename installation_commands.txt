@@ -11,6 +11,8 @@ Then added the following lines to the .bash_profile and sourced it:
 
 
 vi /etc/profile or ~/.bash_profile
+
+add lines:
 	LD_LIBRARY_PATH=/usr/local/pgsql/lib
 	export LD_LIBRARY_PATH
 	MANPATH=/usr/local/pgsql/share/man:$MANPATH
@@ -19,7 +21,7 @@ vi /etc/profile or ~/.bash_profile
 	export PATH
 
 
-I copied the postgresql.conf file into master and slave versions and made some edits. The resulting files are on the repo.
+I copied the postgresql.conf file into master and slave versions and made some edits. The resulting files are on the repo. I added replication to the pg_hba_[m/s].conf
 
 
 Made a couple of links on the master:
@@ -43,3 +45,15 @@ Run the create scripts in the following order:
 5) create_functions.sql
 6) create_tables.sql
 
+
+No changes were made to the recovery_master.conf file. If you need to recover or set that up you should make the changes at that time. The recovery_slave.conf was set to be a hot standby of production. 
+
+On slave machine:
+mkdir -p /home/postgres/trigger_file/ 
+
+I ran the following command to establish replication (on master):
+
+pg_basebackup -D /var/lib/postgresql/9.3/main -h 192.168.2.21 -v -P -U replication --password --xlog-method=stream
+
+
+At which point the databases were created, the users and internal to the database objects were created and replication established.
